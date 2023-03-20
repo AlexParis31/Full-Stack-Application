@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 class="addShow">Add a New Show to the List!</h1>
+    <form class ="form" action="/icons" method="POST">
+        Name: <input type="text" name="Name"/><br/>
+        Url: <input type="text" name="Url"/> <a href="https://fanart.tv/" target="_blank" id="findPoster">(find posters)</a><br/> 
+        Network: <input type="text" name="Network"/><br/>
+        Genre: <input type="text" name="Genre"/> <input type="text" name="Genre"/><input type="text" name="Genre"/><br/>
+        Cast: <input class="cast" type="text" name="Cast[]"/><br/>
+        Rating: <input type="range" min="0" max="100" id="send" name="Rating" oninput="result.value=send.value"/> <input type="text" id="result" value="50"/><br/>
+    </div>
+        
+        
+        <input class = 'button'  style = 'margin-left: 30px' type="submit" value="Add Show"/>
+    </form> 
+    <button class="buttonBack"><a href="/icons">Back</a></button>
+</body>
+</html>

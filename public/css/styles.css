@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.body {
+    background-image: url('https://images2.alphacoders.com/816/81670.jpg');
+}
+
+body {
+     background-image: url('https://images2.alphacoders.com/816/81670.jpg');
+    /* background-size:contain; */
+    /* background-image: url('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood4-900x900.jpg'); */
+    /* background-image: url('https://i.fbcd.co/products/original/11855a0b3c571e61b8115ba19b649f849008eec1b06bb88cb0ad6b4f9a16d13c.jpg'); */
+}
+
+.cast {
+    width: 1000px;
+}
+
+.headerUrl {
+    display: block;
+    margin: auto;
+    width: 21.5em;
+    height: 30em;
+}
+
+img {
+    width: 21.5em;
+    height: 30em;
+    margin: 0 2px 0 2px;
+}
+
+.indexTitle {
+    text-align: center;
+    font-size: 120px;
+    font-family: 'Indie Flower', cursive;
+    color:rgb(57, 135, 57);
+    margin: 70px 0 0 0;
+}
+
+.showTitle {
+    text-align: center;
+}
+
+.showDescription {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+
+.apps {
+    background-color: rgba(24, 81, 41, 0.57);
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+.btn {
+    margin: 1em;
+}
+
+
+.form {
+    margin: 20px 0 0 40px;
+    font-size: 25px;
+    color:bisque;
+    padding: 2em;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: rgba(93, 209, 93, 0.405); */
+    padding: 0.5em;
+    margin:0 2em 2em 2em;
+}
+
+ul {
+    display: flex;
+    justify-content: center
+}
+
+li {
+    list-style-type: none;
+    font-size: larger;
+}
+
+.network {
+    background-color: rgb(53, 104, 53);
+    color: black;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    margin-right: 2em;
+    width: 13em;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    border:none; 
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#dOne {
+    display: none;
+}
+
+#dTwo {
+    display: none;
+}
+
+#dThree {
+    display: none;
+}
+
+
+p {
+    font: aliceblue;
+}
+
+.addShow {
+    color: bisque;
+    text-align: center;
+    font-size: 60px;
+}
+
+#findPoster {
+    
+    font-size: 25px;
+    color:bisque;
+    padding: 1em;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button {
+    top:50%;
+    background-color:#13133f;
+    color: white;
+    border:none; 
+    border-radius:10px; 
+    min-height:40px; 
+    min-width: 120px;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+.buttonEdit {
+    top:50%;
+    background-color: white;
+    color:#13133f;
+    border:none; 
+    border-radius:10px; 
+    min-height:40px; 
+    min-width: 120px;
+    margin: 10px;
+    font-size: 15px;
+  }
+
+.buttonDelete {
+    top:50%;
+    background-color: rgb(209, 30, 30);
+    color: white;
+    border:none; 
+    border-radius:10px; 
+    min-height:40px; 
+    min-width: 120px;
+    margin: 10px 10px 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+.buttonAdd {
+    top:50%;
+    background-color: rgb(31, 234, 31);
+    color: black;
+    border:none; 
+    border-radius:10px; 
+    min-height:90px; 
+    min-width: 300px;
+    margin: 20px 0 60px 60px;
+    font-size: 30px;
+}
+
+.buttonBack {
+    background-color: rgb(88, 90, 86);
+    top:50%;
+    color:#13133f;
+    border:none; 
+    border-radius:10px; 
+    min-height:40px; 
+    min-width: 120px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.rating {
+    color: antiquewhite;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.white {
+    color: white;
+    padding: 0;
+}
