@@ -47,31 +47,31 @@
     <div class='flex'>
         <p class="network" id="nOne">Network</p>
         <div class="network" id="dOne">
-            <li> <a href='/icons'><button class="button">All</button></a></li>
-            <li> <a href='/icons/netflix'><button class="button">Netflix</button></a></li>
-            <li> <a href='/icons/hbo'><button class="button">HBO</button></a></li>
-            <li> <a href='/icons/amc'><button class="button">AMC</button></a></li>
-            <li> <a href='/icons/fx'><button class="button">FX</button></a></li>
+            <li> <a href='/'><button class="button">All</button></a></li>
+            <li> <a href='/netflix'><button class="button">Netflix</button></a></li>
+            <li> <a href='/hbo'><button class="button">HBO</button></a></li>
+            <li> <a href='/amc'><button class="button">AMC</button></a></li>
+            <li> <a href='/fx'><button class="button">FX</button></a></li>
         </div>
     </div>
     <div class='flex'>
         <p class="network" id="nTwo">Genre</p>
         <div class="network" id="dTwo">
-            <li> <a href='/icons'><button class="button">All</button></a></li>
-            <li> <a href='/icons/drama'><button class="button">Drama</button></a></li>
-            <li> <a href='/icons/action'><button class="button">Action</button></a></li>
-            <li> <a href='/icons/comedy'><button class="button">Comedy</button></a></li>
-            <li> <a href='/icons/sci-fi'><button class="button">Science-Fiction</button></a></li>
+            <li> <a href='/'><button class="button">All</button></a></li>
+            <li> <a href='/drama'><button class="button">Drama</button></a></li>
+            <li> <a href='/action'><button class="button">Action</button></a></li>
+            <li> <a href='/comedy'><button class="button">Comedy</button></a></li>
+            <li> <a href='/sci-fi'><button class="button">Science-Fiction</button></a></li>
         </div>
     </div>
     <div class="flex">
         <p class="network" id="nThree">Rating</p>
         <div class="network" id="dThree">
-            <li> <a href='/icons'><button class="button">All</button></a></li>
-            <li> <a href='/icons/ninety'><button class="button">90 +</button></a></li>
-            <li> <a href='/icons/eighty'><button class="button">80 +</button></a></li>
-            <li> <a href='/icons/seventy'><button class="button">70 +</button></a></li>
-            <li> <a href='/icons/fifty'><button class="button">70 or less</button></a></li>
+            <li> <a href='/'><button class="button">All</button></a></li>
+            <li> <a href='/ninety'><button class="button">90 +</button></a></li>
+            <li> <a href='/eighty'><button class="button">80 +</button></a></li>
+            <li> <a href='/seventy'><button class="button">70 +</button></a></li>
+            <li> <a href='/fifty'><button class="button">70 or less</button></a></li>
         </div>
     </div>
     
@@ -81,13 +81,13 @@
 
 <% for(let i = 0; i < icons.length; i++){ %>
     <div class="apps">
-        <a href="/icons/<%=icons[i].id%>"><img src=<%=icons[i].Url%>></img></a> </br>
+        <a href="/<%=icons[i].id%>"><img src=<%=icons[i].Url%>></img></a> </br>
         <p class="rating">Rating: <%=icons[i].Rating%></p>
     
         
-        <form action="/icons/<%=icons[i].id%>?_method=DELETE" method="POST">
+        <form action="/<%=icons[i].id%>?_method=DELETE" method="POST">
             <input class="buttonDelete" type="submit" value="DELETE">
-            <a href="/icons/<%=icons[i].id%>/edit"><button class="buttonEdit" type="button">Edit</button></a>
+            <a href="/<%=icons[i].id%>/edit"><button class="buttonEdit" type="button">Edit</button></a>
         </form>
     </div>
 <% } %>
@@ -95,7 +95,7 @@
 
     
     <div>
-        <a href='/icons/new'><button class="buttonAdd" type="button">Add New Show</button></a>
+        <a href='/new'><button class="buttonAdd" type="button">Add New Show</button></a>
     </div>
 
 
