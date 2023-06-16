@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 
 
-app.get('/icons/netflix', (req, res) => {
+app.get('/netflix', (req, res) => {
     IconsSchema.find({Network: "Netflix"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -32,7 +32,7 @@ app.get('/icons/netflix', (req, res) => {
     });
 })
 
-app.get('/icons/hbo', (req, res) => {
+app.get('/hbo', (req, res) => {
     IconsSchema.find({Network: "HBO"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -42,7 +42,7 @@ app.get('/icons/hbo', (req, res) => {
     })
 });
 
-app.get('/icons/amc', (req, res) => {
+app.get('/amc', (req, res) => {
     IconsSchema.find({Network: "AMC"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -52,7 +52,7 @@ app.get('/icons/amc', (req, res) => {
     })
 });
 
-app.get('/icons/fx', (req, res) => {
+app.get('/fx', (req, res) => {
     IconsSchema.find({Network: "FX"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -62,7 +62,7 @@ app.get('/icons/fx', (req, res) => {
     })
 });
 
-app.get('/icons/drama', (req, res) => {
+app.get('/drama', (req, res) => {
     IconsSchema.find({Genre: "Drama"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -72,7 +72,7 @@ app.get('/icons/drama', (req, res) => {
     })
 });
 
-app.get('/icons/action', (req, res) => {
+app.get('/action', (req, res) => {
     IconsSchema.find({Genre: "Action"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -82,7 +82,7 @@ app.get('/icons/action', (req, res) => {
     })
 });
 
-app.get('/icons/comedy', (req, res) => {
+app.get('/comedy', (req, res) => {
     IconsSchema.find({Genre: "Comedy"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -92,7 +92,7 @@ app.get('/icons/comedy', (req, res) => {
     })
 });
 
-app.get('/icons/sci-fi', (req, res) => {
+app.get('/sci-fi', (req, res) => {
     IconsSchema.find({Genre: "Science-Fiction"}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -103,7 +103,7 @@ app.get('/icons/sci-fi', (req, res) => {
 });
 
 
-app.get('/icons/ninety', (req, res) => {
+app.get('/ninety', (req, res) => {
     IconsSchema.find({Rating:{$gt:89}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -113,7 +113,7 @@ app.get('/icons/ninety', (req, res) => {
     })
 });
 
-app.get('/icons/eighty', (req, res) => {
+app.get('/eighty', (req, res) => {
     IconsSchema.find({Rating:{$gt:79, $lt:89}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -123,7 +123,7 @@ app.get('/icons/eighty', (req, res) => {
     })
 });
 
-app.get('/icons/seventy', (req, res) => {
+app.get('/seventy', (req, res) => {
     IconsSchema.find({Rating:{$gt:69, $lt:79}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -135,7 +135,7 @@ app.get('/icons/seventy', (req, res) => {
 
 
 
-app.get('/icons/fifty', (req, res) => {
+app.get('/fifty', (req, res) => {
     IconsSchema.find({Rating:{$lt:70}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -147,7 +147,7 @@ app.get('/icons/fifty', (req, res) => {
 
 
 
-app.get('/icons', (req, res) => {
+app.get('/', (req, res) => {
     IconsSchema.find({}).then((iconsFind)=> {
         res.render('index.ejs', 
         {
@@ -157,19 +157,19 @@ app.get('/icons', (req, res) => {
     })
 });
 
-app.get('/icons/new', (req,res) => {
+app.get('/new', (req,res) => {
     res.render('new.ejs')
 })
 
 
 
-app.post('/icons', (req,res) => {
+app.post('/', (req,res) => {
     IconsSchema.create(req.body).then(() => {
-        res.redirect('/icons')
+        res.redirect('/')
     })
 })
 
-app.get('/icons/:id', (req, res) => {
+app.get('/:id', (req, res) => {
     IconsSchema.findById(req.params.id).then((currentIcon)=> {
         res.render('show.ejs', 
         {
@@ -179,15 +179,15 @@ app.get('/icons/:id', (req, res) => {
     })
 });
 
-app.delete('/icons/:id', (req, res) => {
+app.delete('/:id', (req, res) => {
     //use the id from the url params to find one document in the db by its id and delete it.
     IconsSchema.findByIdAndRemove(req.params.id).then((deletedShow) => {
       //after its deleted redirect to back home
-       res.redirect('/icons')
+       res.redirect('/')
     })
   })
 
-app.get('/icons/:id/edit', (req, res) => {
+app.get('/:id/edit', (req, res) => {
   IconsSchema.findById(req.params.id).then((editedIcons) => {
     res.render('edit.ejs', {
       icons: editedIcons
@@ -195,9 +195,9 @@ app.get('/icons/:id/edit', (req, res) => {
   })
 })
 
-app.put('/icons/:id', (req, res) => {
+app.put('/:id', (req, res) => {
   IconsSchema.findByIdAndUpdate(req.params.id, req.body, {new:true}).then(() => {
-    res.redirect('/icons')
+    res.redirect('/')
   })
 })
 
