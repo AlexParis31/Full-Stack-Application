@@ -14,11 +14,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
-app.get('/', (req, res) => {
-    IconsSchema.find({}).then(()=> {
-        res.render('home.ejs');
-    })
-});
+
 
 
 
