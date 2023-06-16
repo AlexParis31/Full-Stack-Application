@@ -103,7 +103,6 @@ app.get('/icons/sci-fi', (req, res) => {
 
 
 app.get('/icons/ninety', (req, res) => {
-    const ninety = Number()
     IconsSchema.find({Rating:{$gt:89}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -114,7 +113,6 @@ app.get('/icons/ninety', (req, res) => {
 });
 
 app.get('/icons/eighty', (req, res) => {
-    const ninety = Number()
     IconsSchema.find({Rating:{$gt:79, $lt:89}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -125,7 +123,6 @@ app.get('/icons/eighty', (req, res) => {
 });
 
 app.get('/icons/seventy', (req, res) => {
-    const ninety = Number()
     IconsSchema.find({Rating:{$gt:69, $lt:79}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -138,7 +135,6 @@ app.get('/icons/seventy', (req, res) => {
 
 
 app.get('/icons/fifty', (req, res) => {
-    const ninety = Number()
     IconsSchema.find({Rating:{$lt:70}}).then((iconsNetflix)=> {
         res.render('index.ejs', 
         {
@@ -234,4 +230,4 @@ app.listen(3000, () => {
     console.log('listening...');
 })
 
-mongoose.connect('mongodb://localhost:27017/Icons')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Icons')
